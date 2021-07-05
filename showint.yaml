@@ -5,3 +5,7 @@
   - name: show interface
     ios_command:
       commands: show version
+    register: result
+  - name: debug
+    debug:
+     var: result
