@@ -1,6 +1,6 @@
 ---
 - name: cisco create interface 
-  hosts: cisco
+  hosts: all
   gather_facts: no
   tasks:
   - name: create intface int 
