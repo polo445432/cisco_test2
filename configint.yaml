@@ -3,11 +3,13 @@
   hosts: all
   gather_facts: no
   tasks:
-  - name: create intface int 
+  - name: create intface lo0 
     ios_config:
       lines:
        - ip address 172.16.0.1 255.255.255.0
       parents: interface loopback 0
+  - name: create intface lo1 
+    ios_config:    
       lines:
        - ip address 10.10.10.1 255.255.255.0
       parents: interface loopback 1
