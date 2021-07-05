@@ -1,0 +1,7 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+  - name: show interface
+    ios_command:
+      commands: show version
