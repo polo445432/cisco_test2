@@ -1,0 +1,14 @@
+---
+- name: cisco create interface 
+  hosts: cisco
+  gather_facts: no
+  tasks:
+  - name: create intface int 
+    ios_config:
+      lines:
+      - ip address 172.16.1.1 255.255.255.0
+      - ip address 172.16.11.1 255.255.255.0
+      parents: {{"item"}}
+    with_items:
+      - interface loopback 0
+      - interface loopback 1 
