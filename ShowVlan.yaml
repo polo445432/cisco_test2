@@ -6,11 +6,8 @@
     ios_command:
       commands: show vlan brief
     register: result
-  - name: debug
-    debug:
-     var: result.stdout_lines
   - name: save collected infromation in data directory
     copy:
       dest: "output.txt"
       content: 
-        {{ result.stdout }}
+        {{ result.stdout_lines }}
