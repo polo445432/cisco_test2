@@ -13,4 +13,4 @@
     copy:
       dest: "output.txt"
       content: 
-        {{ result.stdout[0] }}
+        {{ result.stdout }}
