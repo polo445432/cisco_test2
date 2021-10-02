@@ -9,3 +9,8 @@
   - name: debug
     debug:
      var: result.stdout_lines
+  - name: save collected infromation in data directory
+    copy:
+      dest: "output.txt"
+      content: 
+        {{ result.stdout[0] }}
