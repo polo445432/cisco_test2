@@ -10,4 +10,4 @@
     copy:
       dest: "output.txt"
       content: 
-        {{ result.stdout_lines }}
+       - "{{ result.stdout_lines }}"
