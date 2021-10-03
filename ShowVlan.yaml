@@ -1,6 +1,6 @@
 ---
 - hosts: SW
-  gather_facts: no
+  gather_facts: yes
   tasks:
   - name: show vlan brief
     ios_command:
