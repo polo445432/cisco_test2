@@ -6,8 +6,7 @@
     ios_command:
       commands: show vlan brief
     register: result
-  - name: save collected infromation in data directory
+  - name: save output to local directory
     copy:
-      dest: "output.txt"
-      content: 
-       - "{{ result.stdout_lines }}"
+          content: "{{ config.stdout | replace('\\n', '\n') }}"          
+          dest: "show-output/{{ inventory_hostname }}.ios"
